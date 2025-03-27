@@ -1,7 +1,6 @@
 C:\Users\thalytadiniz\CrudAPI\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\thalytadiniz\CrudAPI\bin\Debug\net7.0\appsettings.json
 C:\Users\thalytadiniz\CrudAPI\bin\Debug\net7.0\CrudAPI.staticwebassets.runtime.json
-C:\Users\thalytadiniz\CrudAPI\bin\Debug\net7.0\app.db
 C:\Users\thalytadiniz\CrudAPI\bin\Debug\net7.0\CrudAPI.exe
 C:\Users\thalytadiniz\CrudAPI\bin\Debug\net7.0\CrudAPI.deps.json
 C:\Users\thalytadiniz\CrudAPI\bin\Debug\net7.0\CrudAPI.runtimeconfig.json

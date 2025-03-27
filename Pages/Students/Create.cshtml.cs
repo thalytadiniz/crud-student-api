@@ -12,30 +12,34 @@ namespace CrudAPI.Pages_Students
 {
     public class CreateModel : PageModel
     {
-        private readonly CrudAPI.Data.ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public CreateModel(CrudAPI.Data.ApplicationDbContext context)
+        public CreateModel(ApplicationDbContext context)
         {
             _context = context;
         }
 
+        // Adicione isso se quiser carregar Premiums existentes no formulário
+        public SelectList PremiumOptions { get; set; }
+
         public IActionResult OnGet()
         {
+            // Opcional: Carregar Premiums se necessário
+            PremiumOptions = new SelectList(_context.Premiums, "Id", "Title");
             return Page();
         }
 
-        [BindProperty] public Student Student { get; set; } = default!;
+        [BindProperty]
+        public Student Student { get; set; } = default!;
 
-
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Premiums == null || Student == null)
+            if (!ModelState.IsValid || Student == null)
             {
                 return Page();
             }
 
-            _context.Premiums.Add(Student);
+            _context.Students.Add(Student);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

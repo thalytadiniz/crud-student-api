@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CrudAPI.Data.Migrations
+namespace CrudAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250326193421_v1")]
-    partial class v1
+    [Migration("20250327202057_v2")]
+    partial class v2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace CrudAPI.Data.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Students");
+                    b.ToTable("Premiums");
                 });
 
             modelBuilder.Entity("CrudAPI.Models.Student", b =>
@@ -64,7 +64,7 @@ namespace CrudAPI.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Premiums");
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
